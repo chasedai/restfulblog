@@ -1,0 +1,21 @@
+<hibernate-configuration>
+    <session-factory>
+        <!--配置数据源信息-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/happyending</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">admin</property>
+
+        <!--打印操作过程中的SQL语句-->
+        <property name="show_sql">true</property>
+        <!--格式化SQL语句-->
+        <property name="format_sql">true</property>
+
+        <!--配置数据库操作策略，以后将介绍-->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--配置对应的映射文件 即 元数据-->
+        <mapping resource="model/models.hbm.xml"></mapping>
+    </session-factory>
+
+</hibernate-configuration>

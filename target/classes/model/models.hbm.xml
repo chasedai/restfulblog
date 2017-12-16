@@ -1,0 +1,31 @@
+<hibernate-mapping>  
+    <class name="model.userTest" table="user">  
+        <id name="id" column="User_ID" type="java.lang.Integer">  
+            <generator class="identity"></generator>  
+        </id>  
+        <property name="name" column="User_name" type="string"></property>  
+        <property name="age" column="User_password" type="string"></property>  
+    </class>  
+    <class name="model.PostModel" table="Posts">  
+        <id name="ID" column="post_ID" type="java.lang.Integer">  
+            <generator class="identity"></generator>  
+        </id>  
+        <property name="category" column="post_Category" type="java.lang.Integer"></property>  
+        <property name="title" column="post_Title" type="string"></property>  
+        <property name="time" column="post_Time" type="string"></property> 
+        <property name="content" column="post_Content" type="string"></property> 
+    </class>  
+    <class name="model.CategoryModel" table="Categories">  
+        <id name="ID" column="cate_ID" type="java.lang.Integer">  
+            <generator class="identity"></generator>  
+        </id>  
+        <property name="cateName" column="cate_Name" type="string"></property>  
+        <property name="link" column="cate_Link" type="string"></property>  
+    </class> 
+    <class name="model.LastModified" table="LastModified">  
+        <id name="ID" column="lm_ID" type="java.lang.Integer">  
+            <generator class="identity"></generator>  
+        </id>  
+        <property name="lastModified" column="lm_Time" type="java.sql.Date"></property>  
+    </class> 
+</hibernate-mapping>  
