@@ -11,18 +11,17 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport"
 	content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Blog HomePage</title>
+<title>A single user blog website - Designed by Chase</title>
 <link rel="alternate" type="application/rss+xml" title=""
 	href="feed/index.html">
 <link href="http://fonts.googleapis.com/css?family=Raleway:700,300"
 	rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/prettify.css">
-  
-<script src="js/jquery-2.2.1.js"></script>
+<script src="js/jquery-2.2.1.js" type="text/javascript"></script>
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/ap.js"></script> 
+<script src="js/ap.js"></script>
 <!--<script>
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
@@ -41,8 +40,15 @@ $(document).ready(function(){
 </script>-->
 </head>
 <body>
-<% System.out.println(request.getContextPath()); %>
-<% System.out.println(request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/"); %>
+	<%
+		System.out.println(request.getContextPath());
+	%>
+	<%
+		System.out.println(request.getScheme() + "://"
+				+ request.getServerName() + ":" + request.getServerPort()
+				+ request.getContextPath() + "/");
+		int pageCount = 1;
+	%>
 	<div class="wrapper">
 		<nav>
 
@@ -54,8 +60,8 @@ $(document).ready(function(){
 			</div>
 
 			<div class="pull-right">
-				<a class="btn btn-download"><img
-					src="img/download.png" width="25" alt="Temp" /> Temp button</a>
+				<a class="btn btn-download"><img src="img/download.png"
+					width="25" alt="Temp" /> Temp button</a>
 			</div>
 
 		</nav>
@@ -68,31 +74,28 @@ $(document).ready(function(){
 			<div class="container">
 				<ul class="docs-nav">
 					<li><strong>Categories</strong></li>
-					<li><a href="#welcome" class="cc-active">Java</a></li>
-					<li><a href="#welcome" class="cc-active">PHP</a></li>
-					<li><a href="#welcome" class="cc-active">SQL</a></li>
-					<li><a href="#welcome" class="cc-active">Front-end</a></li>
+					<li><a href="#Java" class="cc-active">Java</a></li>
+					<li><a href="#PHP" class="cc-active">PHP</a></li>
+					<li><a href="#SQL" class="cc-active">SQL</a></li>
+					<li><a href="#FrontEnd" class="cc-active">Front-end</a></li>
 				</ul>
 				<div class="docs-content">
 					<div id="allPosts">
-						<script>
-							//alert(window.location.host);
-						</script>
+						<!-- where magic happens -->
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="vibrant centered">
 			<div class="">
-				<h4>
-					Have a nice day!
-				</h4>
+				<h4>Have a nice day!</h4>
 			</div>
 		</section>
 		<footer>
 			<div class="">
 				<p>
-					&copy; Copyright <a href="https://www.behance.net/iamfrittt3d6c">Frittt Templates</a>. All Rights Reserved
+					&copy; Copyright <a href="https://www.behance.net/iamfrittt3d6c">Frittt
+						Templates</a>. All Rights Reserved
 				</p>
 			</div>
 		</footer>

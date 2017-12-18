@@ -1,26 +1,11 @@
 package model;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-
-
-
-
-
-
-
-
-
-
-import utils.HibernateUtils;
-
 
 public class testhibernate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		PostModel pm = new PostModel(1, "Test title4",new SimpleDateFormat("yyyy-MM-dd").format(new Date()), "test4");
+//		PostModel pm = new PostModel(1, "asdasda",new SimpleDateFormat("yyyy-MM-dd").format(new Date()), "qwewqe");
 //		HibernateUtils.creatRecord(pm);
 //		CategoryModel cm = new CategoryModel("Java", "java");
 //		HibernateUtils.creatRecord(cm);

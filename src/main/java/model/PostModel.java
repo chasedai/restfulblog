@@ -1,9 +1,7 @@
 package model;
 
-import java.sql.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement
 public class PostModel {
@@ -14,18 +12,18 @@ public class PostModel {
 	private String time;
 	private String content;
 	
-//	public PostModel(){
-//		
-//	}
-//	
-//	public PostModel(int category, String title, String time,
-//			String content) {
-//		super();
-//		this.category = category;
-//		this.title = title;
-//		this.time = time;
-//		this.content = content;
-//	}
+	public PostModel(){
+		
+	}
+	
+	public PostModel(int category, String title, String time,
+			String content) {
+		super();
+		this.category = category;
+		this.title = title;
+		this.time = time;
+		this.content = content;
+	}
 
 
 	public int getID() {

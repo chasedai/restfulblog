@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import model.PostModel;
@@ -14,38 +15,94 @@ public class HibernateUtils {
 	
 	private static SessionFactory sessionFactory;
 
-    //私有化构造器
     private HibernateUtils(){}
 
     static {
         Configuration configuration = new Configuration().configure();
         sessionFactory = configuration.buildSessionFactory();
     }
-
-    public static void creatRecord(Object object){
-    	Session session = sessionFactory.openSession();
-    	Transaction ts = session.beginTransaction();
-    	session.save(object);
-    	ts.commit();
-    	session.close();
+    /**
+     * New post
+     * @param object
+     * @return 
+     */
+    public static boolean creatRecord(Object object){
+    	try {
+    		Session session = sessionFactory.openSession();
+        	Transaction ts = session.beginTransaction();
+        	session.save(object);
+        	ts.commit();
+        	session.close();
+        	return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
     }
     
     public static PostModel retrieveSingleByID(int id){
-    	Session session = sessionFactory.openSession();
-    	PostModel pm = session.get(PostModel.class, id);
-    	session.close();
-    	return pm;	
+    	try {
+    		Session session = sessionFactory.openSession();
+        	PostModel pm = session.get(PostModel.class, id);
+        	session.close();
+        	return pm;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("something wrong fetching data");
+			return null;
+		}	
     }
+    
+    public static boolean deletePostById(int id){
+    	try {
+    		PostModel pm = retrieveSingleByID(id);
+        	Session session = sessionFactory.openSession();
+        	Transaction ts = session.beginTransaction();
+        	session.delete(pm);
+        	ts.commit();
+        	session.close();
+        	return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("something wrong deleting data");
+			return false;
+		}
+    }
+    
+    public static boolean updatePost(Object object){
+    	try {
+    		Session session = sessionFactory.openSession();
+        	Transaction ts = session.beginTransaction();
+        	session.update(object);
+        	ts.commit();
+        	session.close();
+        	return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("something wrong updating data");
+			return false;
+		}
+    }
+    
+    
+    
+    
     
     /**
      * 返回所有blog select * from table
      * @return All Posts records in database
      */
-//    @SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")
 	public static List<PostModel> retrieveAllPosts(){
-		
-    	List<PostModel> list = (ArrayList<PostModel>)sessionFactory.openSession().createCriteria(PostModel.class).list();
-    	return list;
+    	try {
+    		List<PostModel> list = (ArrayList<PostModel>)sessionFactory.openSession().createCriteria(PostModel.class).list();
+        	Collections.reverse(list);
+        	return list;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("something wrong fetching list");
+			return null;
+		}
     }
 
 }
