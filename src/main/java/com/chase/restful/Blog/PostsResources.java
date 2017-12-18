@@ -10,7 +10,6 @@ import javax.ws.rs.core.MediaType;
 
 import utils.HibernateUtils;
 import model.PostModel;
-import model.userTest;
 
 @Path("posts")
 public class PostsResources {
@@ -18,7 +17,7 @@ public class PostsResources {
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public List<PostModel> getAllPosts() {
-		System.out.println("读取全部blog");
+		System.out.println("get all posts");
 		return HibernateUtils.retrieveAllPosts();
 	}
 	

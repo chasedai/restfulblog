@@ -1,31 +1,23 @@
-/**
- * 
- */
-// JavaScript Document
 var rootUrl = "http://" + window.location.host + "/Blog/rest/posts";
 var allPosts = function() {
 	$.ajax({
 		type : 'GET',
 		url : rootUrl,
 		dataType : "json",
-		success : renderList
+		success : renderAllPosts
 	});
 };
 
-var renderList = function(data) {
-	$.each(data, function(index, post) {
-
-		$('#testforRest4').append(
-				"<a href=\"" + post.ID + "\"><h3 id=\"animation_style\">"
-						+ post.title + "</h3></a><hr>");
+var renderAllPosts = function(aposts) {
+	$.each(aposts.postModel, function(index, post) {
+		$('#allPosts').append(
+				'<a href=posts/' + post.ID + '><h3 id="animation_style">'
+						+ post.title + '</h3></a><hr>');
 
 	});
-
-	// $('#myTable').DataTable();
-
 }
 
 $(document).ready(function() {
-	// $('#testforRest4').append(window.location.host+"/Blog/rest/posts");
+//	alert(window.location.host);
 	allPosts();
 });

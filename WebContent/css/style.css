@@ -1,6 +1,9 @@
 /* Author: Frittt Templates
    URI: #
 */
+#postInfo{
+	font-size: 11px; color: #4d4d4d;
+}
 
 body, html {
     margin: 0;
@@ -456,7 +459,17 @@ input:focus {
     .docs-content {
         padding-left: 310px;
     }
+    
+    .docs-content-post {
+        
+    }
 
+	#postContent{
+		padding-left:15px;
+		padding-top:0;
+		padding-bottom:0;
+		margin:0;
+	}
 
 
     header {

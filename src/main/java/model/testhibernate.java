@@ -1,13 +1,9 @@
 package model;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.sql.Date;
-import java.util.Iterator;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
 
 
 
@@ -24,7 +20,7 @@ public class testhibernate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		PostModel pm = new PostModel(1, "Test title",new Date(System.currentTimeMillis()), "test");
+//		PostModel pm = new PostModel(1, "Test title4",new SimpleDateFormat("yyyy-MM-dd").format(new Date()), "test4");
 //		HibernateUtils.creatRecord(pm);
 //		CategoryModel cm = new CategoryModel("Java", "java");
 //		HibernateUtils.creatRecord(cm);

@@ -48,13 +48,13 @@ $(document).ready(function(){
 
 			<div class="pull-left">
 				<h1>
-					<a href="javascript:"><img src="img/icon.png"
+					<a><img src="img/icon.png"
 						alt="Free Documentation Template Icon" /> <span>Chase</span></a>
 				</h1>
 			</div>
 
 			<div class="pull-right">
-				<a href="#" target="_blank" class="btn btn-download"><img
+				<a class="btn btn-download"><img
 					src="img/download.png" width="25" alt="Temp" /> Temp button</a>
 			</div>
 
@@ -67,25 +67,14 @@ $(document).ready(function(){
 		<section>
 			<div class="container">
 				<ul class="docs-nav">
-					<li><strong>Getting Started</strong></li>
-					<li><a href="#welcome" class="cc-active">Welcome</a></li>
-					<li><a href="#benefits" class="cc-active">Benefits</a></li>
-					<li><a href="#features" class="cc-active">Features</a></li>
-					<li><a href="#license" class="cc-active">License</a></li>
-					<li class="separator"></li>
-					<li><strong>Customization</strong></li>
-					<li><a href="#view_type" class="cc-active">View Type</a></li>
-					<li><a href="#animation_style" class="cc-active">Animation
-							Styles</a></li>
-					<li><a href="#bars_text" class="cc-active">Bars Text</a></li>
-					<li><a href="#vote_counter" class="cc-active">Vote Counter</a></li>
-					<li><a href="#rating_icons" class="cc-active">Rating Icons</a></li>
-					<li><a href="#rating_titles" class="cc-active">Rating
-							Titles</a></li>
-					<li><a href="#bar_colors" class="cc-active">Bar Colors</a></li>
+					<li><strong>Categories</strong></li>
+					<li><a href="#welcome" class="cc-active">Java</a></li>
+					<li><a href="#welcome" class="cc-active">PHP</a></li>
+					<li><a href="#welcome" class="cc-active">SQL</a></li>
+					<li><a href="#welcome" class="cc-active">Front-end</a></li>
 				</ul>
 				<div class="docs-content">
-					<div id="testforRest4">
+					<div id="allPosts">
 						<script>
 							//alert(window.location.host);
 						</script>
@@ -96,21 +85,14 @@ $(document).ready(function(){
 		<section class="vibrant centered">
 			<div class="">
 				<h4>
-					This documentation template is provided by <a href="#"
-						target="_blank">Frittt</a>. You can download and use this template
-					for free. If you have used this template, please pay the
-					developer's effort by Tweeting, sharing on Facebook, social mention
-					or with a linkback. Enjoy! :)
+					Have a nice day!
 				</h4>
 			</div>
 		</section>
 		<footer>
 			<div class="">
 				<p>
-					&copy; Copyright Frittt Templates. All Rights Reserved.More
-					Templates <a href="http://www.cssmoban.com/" target="_blank"
-						title="模板之家">模板之家</a> - Collect from <a
-						href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+					&copy; Copyright <a href="https://www.behance.net/iamfrittt3d6c">Frittt Templates</a>. All Rights Reserved
 				</p>
 			</div>
 		</footer>

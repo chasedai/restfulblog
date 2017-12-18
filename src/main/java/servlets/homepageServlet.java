@@ -8,11 +8,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.PathParam;
+
+import model.PostModel;
+import utils.HibernateUtils;
 
 /**
  * Servlet implementation class homepageServlet
  */
-@WebServlet("/2112.html")
+@WebServlet("/posts/*")
 public class homepageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -22,14 +26,14 @@ public class homepageServlet extends HttpServlet {
     public homepageServlet() {
         // TODO Auto-generated constructor stub
     }
-
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
+		//response.setContentType("text/html");
+		//PrintWriter out = response.getWriter();
 		String a = "他家就";
 //		String docType =
 //		"<!DOCTYPE HTML >";
@@ -41,8 +45,13 @@ public class homepageServlet extends HttpServlet {
 //		"</BODY></HTML>");
 //		out.close();
 		System.out.println(a);
-		out.println(a);
-		out.close();
+		System.out.println(request.getServletPath());
+		System.out.println(request.getPathInfo());
+		System.out.println(request.getPathInfo().substring(1, request.getPathInfo().length()));
+		//url不变
+		request.getRequestDispatcher("../allposts/postDetail.jsp").forward(request, response);
+		//out.println(a);
+		//out.close();
 	}
 
 	/**

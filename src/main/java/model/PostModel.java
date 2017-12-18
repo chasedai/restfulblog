@@ -14,18 +14,18 @@ public class PostModel {
 	private String time;
 	private String content;
 	
-	public PostModel(){
-		
-	}
-	
-	public PostModel(int category, String title, Date time,
-			String content) {
-		super();
-		this.category = category;
-		this.title = title;
-		this.time = time.toString();
-		this.content = content;
-	}
+//	public PostModel(){
+//		
+//	}
+//	
+//	public PostModel(int category, String title, String time,
+//			String content) {
+//		super();
+//		this.category = category;
+//		this.title = title;
+//		this.time = time;
+//		this.content = content;
+//	}
 
 
 	public int getID() {
