@@ -18,7 +18,7 @@
 	rel="stylesheet">
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="adminjs/jquery.hotkeys.js"></script>
+<script src="../js/jquery.hotkeys.js"></script>
 <script
 	src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="../js/prettify/prettify.js"></script>

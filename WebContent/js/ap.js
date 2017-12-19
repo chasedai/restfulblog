@@ -31,16 +31,28 @@ var pageControl = function(action) {
 	var currentPageFirstPost = postCount - 5;
 	
 	if (pageCount == 1) {
-		for (var i = 0; i < 5; i++) {
-			$('#allPosts').append(
-					'<a href=posts/' + postList.postModel[i].ID
-							+ '><h3 id="animation_style">'
-							+ postList.postModel[i].title + '</h3></a><hr>');
-		}
+		if(postList.length < 5){
+			for (var i = 0; i < tempCount; i++) {
+				$('#allPosts').append(
+						'<a href=posts/' + postList.postModel[i].ID
+								+ '><h3 id="animation_style">'
+								+ postList.postModel[i].title + '</h3></a><hr>');
+			}
 
-		$('#allPosts')
-				.append(
-						'<center><a href="javascript:void(0);" onclick="pageControl(1)">Next</a></center>');
+		}else{
+			
+			for (var i = 0; i < tempCount; i++) {
+				$('#allPosts').append(
+						'<a href=posts/' + postList.postModel[i].ID
+								+ '><h3 id="animation_style">'
+								+ postList.postModel[i].title + '</h3></a><hr>');
+			}
+
+			$('#allPosts')
+					.append(
+							'<center><a href="javascript:void(0);" onclick="pageControl(1)">Next</a></center>');
+		}
+		
 	} else if (postList.postModel.length <= postCount) {
 		// when this is the last page
 		for (var i = currentPageFirstPost; i < postList.postModel.length; i++) {
