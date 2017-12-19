@@ -1,9 +1,4 @@
 Single user blog, restful style
 
-currently:
-restful API completed.
-
-
-to be implmented:
-admin control panel.
-basic auth.
+Finished. (expect categories)
+Now deploying to server.
