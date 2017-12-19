@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * Not implementing now.
+ * @author Chase
+ *
+ */
 public class CategoryModel {
 
 	private int ID;

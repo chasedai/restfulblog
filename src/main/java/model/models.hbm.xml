@@ -1,11 +1,4 @@
-<hibernate-mapping>  
-    <class name="model.userTest" table="user">  
-        <id name="id" column="User_ID" type="java.lang.Integer">  
-            <generator class="identity"></generator>  
-        </id>  
-        <property name="name" column="User_name" type="string"></property>  
-        <property name="age" column="User_password" type="string"></property>  
-    </class>  
+<hibernate-mapping> 
     <class name="model.PostModel" table="Posts">  
         <id name="ID" column="post_ID" type="java.lang.Integer">  
             <generator class="identity"></generator>  

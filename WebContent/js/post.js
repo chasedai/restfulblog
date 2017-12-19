@@ -29,9 +29,10 @@ var renderSinglePost = function(post) {
 	$('#postTitle').append(post.title);
 	$('#postTime').append(post.time);
 	$('#postContent').append(post.content);
+	document.title = post.title + " - Chase's";
 }
-
 
 $(document).ready(function() {	
 	renderPost();
+	
 });

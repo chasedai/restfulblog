@@ -11,7 +11,7 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport"
 	content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>A single user blog website - Designed by Chase</title>
+<title>Hey Look at this Restful Blog!</title>
 <link rel="alternate" type="application/rss+xml" title=""
 	href="feed/index.html">
 <link href="http://fonts.googleapis.com/css?family=Raleway:700,300"
@@ -22,36 +22,10 @@
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/ap.js"></script>
-<!--<script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      $("#testforRest4").append(this.responseText);
-    }
-  };
-  xhttp.open("GET", "http://" + window.location.host+"/Blog/rest/posts", true);
-  xhttp.send();
-}
-$(document).ready(function(){
-	loadDoc();
-});
-//window.onload = loadDoc;
-</script>-->
 </head>
 <body>
-	<%
-		System.out.println(request.getContextPath());
-	%>
-	<%
-		System.out.println(request.getScheme() + "://"
-				+ request.getServerName() + ":" + request.getServerPort()
-				+ request.getContextPath() + "/");
-		int pageCount = 1;
-	%>
 	<div class="wrapper">
-		<nav>
-
+		<!--  <nav>
 			<div class="pull-left">
 				<h1>
 					<a><img src="img/icon.png"
@@ -63,11 +37,10 @@ $(document).ready(function(){
 				<a class="btn btn-download"><img src="img/download.png"
 					width="25" alt="Temp" /> Temp button</a>
 			</div>
-
-		</nav>
+		</nav> -->
 		<header>
 			<div class="container">
-				<h2 class="lone-header">Chase Single User Blog</h2>
+				<h2 class="lone-header">Pure Blog</h2>
 			</div>
 		</header>
 		<section>

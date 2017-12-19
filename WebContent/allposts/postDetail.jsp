@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Hey</title>
 <script type="text/javascript" src="../js/prettify/prettify.js"></script>
 <script src="https://cdn.bootcss.com/prettify/r298/run_prettify.js"></script>
 <script src="../js/layout.js"></script> 
@@ -22,19 +22,14 @@
 			<div class="pull-left">
 				<h1>
 					<a href="../"><img src="../img/icon.png"
-						alt="Free Documentation Template Icon" /> <span>Chase</span></a>
+						alt="HomePage" /> <span>HomePage</span></a>
 				</h1>
-			</div>
-
-			<div class="pull-right">
-				<a class="btn btn-download"><img
-					src="../img/download.png" width="25" alt="Temp" /> Temp button</a>
 			</div>
 
 		</nav>
 		<header>
 			<div class="container">
-				<h2 class="lone-header">Chase Single User Blog</h2>
+				<h2 class="lone-header">Pure Blog</h2>
 			</div>
 		</header>
 		<section>

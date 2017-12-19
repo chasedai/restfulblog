@@ -11,6 +11,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+
+/**
+ * Hibernate CRUD
+ * @author Chase
+ *
+ */
 public class HibernateUtils {
 	
 	private static SessionFactory sessionFactory;
@@ -40,6 +46,11 @@ public class HibernateUtils {
 		}
     }
     
+    /**
+     * Get one post by ID
+     * @param id
+     * @return One post
+     */
     public static PostModel retrieveSingleByID(int id){
     	try {
     		Session session = sessionFactory.openSession();
@@ -53,6 +64,11 @@ public class HibernateUtils {
 		}	
     }
     
+    /**
+     * Delete one post by ID
+     * @param id
+     * @return true if deleted, false if not
+     */
     public static boolean deletePostById(int id){
     	try {
     		PostModel pm = retrieveSingleByID(id);
@@ -69,6 +85,11 @@ public class HibernateUtils {
 		}
     }
     
+    /**
+     * Update post
+     * @param object
+     * @return true if updated, false if not
+     */
     public static boolean updatePost(Object object){
     	try {
     		Session session = sessionFactory.openSession();
@@ -89,8 +110,8 @@ public class HibernateUtils {
     
     
     /**
-     * 返回所有blog select * from table
-     * @return All Posts records in database
+     * Return all posts: select * from table
+     * @return A list of posts
      */
 	@SuppressWarnings("unchecked")
 	public static List<PostModel> retrieveAllPosts(){

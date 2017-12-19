@@ -2,6 +2,12 @@ package model;
 
 import java.sql.Date;
 
+
+/**
+ * Was going to have conditonal get request.
+ * @author Chase
+ *
+ */
 public class LastModified {
 
 	private int ID;
